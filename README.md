@@ -8,9 +8,11 @@ Here by soft we mean that a software should be ready for future changes, extensi
 
 ### Clean Architecture Diagram
 ![enter image description here](https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg)
+
 The above diagram illustrates how a clean architecture and the *Dependency Inversion Principal* works:
 
  - **Entities & Use cases**:  These are the core business logic of our app. In fact it could be a simple object of data. in a sense we can say that our core business logic should be some raw data and shouldn't change anytime. because our business is independent of a particular framework, language or even the fact that it's online or physical. The same business rules of a real world book store is applied to our core business logic and entities. 
+
  **How can we apply entities in React?**
  For that matter we use **Redux**.  Redux is a state management library that is framework agnostic. i.e you can use it in React, Angular, Vue.js etc. So our core business logic is implemented in Redux. This layer is completely independent and shouldn't import anything from below layers.
  - **Controllers**: In react these are our services or better say, our api caller functions. This layer is also independent. but our *view* layer which is lower, can access this layer.
@@ -27,4 +29,4 @@ The above diagram illustrates how a clean architecture and the *Dependency Inver
  - and some other react libraries.
  
  ### Live version:
- d
+  [demo](https://react-clean-architecture.vercel.app/)
